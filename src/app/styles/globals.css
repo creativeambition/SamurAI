@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+    --background: #161616;
+    --background-alt: #111111;
+    --foreground: #e5e5e5;
+    --foreground-alt: #d3d3d328;
+    --accent-clr: purple;
+
+    --animate-fade: fade 0.75s forwards ease-in-out;
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+            transform: translateY(20%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Satoshi, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
